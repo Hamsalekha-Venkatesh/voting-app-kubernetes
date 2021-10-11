@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name:  voting-app-pod
+  labels:
+    name: voting-service
+    app: demo-voting-app
+spec:
+  type: NodePort # makes it external service by giving an external nodePort value under ports section
+  selector:
+    name: voting-app-pod
+    app: demo-voting-app
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30004 
