@@ -5,7 +5,7 @@ metadata:
   labels:
     name: postgres-pod
     app: demo-voting-app
-sepc:
+spec:
   containers:
     - image: postgres
       name: postgres 
